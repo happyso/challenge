@@ -2,9 +2,8 @@
   "name": "wetube",
   "version": "1.0.0",
   "description": "youtube clone with vanillaJS ",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "author": "kim so young",
   "license": "ISC",
