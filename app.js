@@ -9,10 +9,6 @@ const app = express();
 
 const handleHome = (req,res) => res.send("Hello from Home");
 const handleProfile = (req, res) => res.send("You are on my profile");
-const handleAboutus = (req, res) => res.send("About us");
-const handleContact = (req, res) => res.send("Contact");
-const handleProtected = (req, res) => res.send("Protected!!");
-  
 
 app.use(cookieParser());
 app.use(bodyParser.json());
@@ -21,10 +17,8 @@ app.use(helmet());
 app.use(morgan("dev"));
 
 app.get("/", handleHome);
-app.use("/user", userRouter);
+app.use("/user", userRouter);//use 모든 라이터를 사용하겠다 
 app.get("/profile", handleProfile);
-app.get("/about-us", handleAboutus);
-app.get("/contact", handleContact);
 
 
 
